@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Race Designer</title>
+    <meta name="description" content="Interactive graph convenient tool for design race plan" />
+    <meta name="keywords" content="Running pace, pace calculator, pace plan, running plan, visual pace, visual running, running calculator, visual calculator, triathlon calculator, triathlon pace" />
+    <meta name="author" content="Avner Kantor" />
+    <meta charset="UTF-8" />
+    <link rel="shortcut icon" href="/img/running-icon.png" type="image/png" />
+    <link href="//code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="StyleSheet1.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="JScript1.js"></script>
+
+</head>
+<body id="avner">
+    <div id="header">
+        <h1 style="-webkit-text-shadow: 4px 4px 2px rgba(150, 150, 150, 1); text-shadow: 4px 4px 2px rgba(150, 150, 150, 1);">
+            Race Designer<span style="font-size: 12px;"> Beta</span>
+        </h1>
+        <h2>
+            <i>Visualize Your Run </i>&nbsp;
+        </h2>
+    </div>
+    <div id="chart">
+        <div id="left-ruler" class="ruler">
+        </div>
+        <h3 class="ui-widget-header" id="chartHeader">
+            Running
+        </h3>
+        <div id="container" class="ui-widget-content">
+        </div>
+        <!--<div id='constantLine1' class='ui-widget-content' title="You can drag me">
+        </div>-->
+        <!--<ol class="ruler" style="width:10%"></ol>-->
+        <ol id="bottom-ruler" class="ruler">
+        </ol>
+    </div>
+    <div id="iPanel">
+        <h2 style="text-align:center; color:white" >Design Panel</h2>
+        <p class="rText">
+            Race:
+        </p>
+        <!-- <p class="range">0</p>-->
+        <div id="raceSlider" class="sliders">
+        </div>
+        <input type="text" id="raceInput" value="10km" readonly="readonly" />
+        <p class="rText">
+            Time Target:
+        </p>
+        <div id="timeSlider" class="sliders">
+        </div>
+        <input type="text" id="timeTarget" readonly="readonly" />
+        <p class="rText">
+            Pace Target:
+        </p>
+        <div id="paceSlider" class="sliders">
+        </div>
+        <input type="text" id="TargetPaceTime" readonly="readonly" />
+        <!--
+            Target Speed
+
+            <div id="speedSlider" class="sliders">
+            </div>
+
+            <input type="text" id="TargetSpeedTime" readonly="readonly" value="12 km/hr" />
+            -->
+        <!--<p class="rText">
+            Factor
+            </p>
+
+            <div id="factorSlider" class="sliders">
+            </div>
+
+            <input type="text" id="targetFactorTime" value="-2%" readonly="readonly" />-->
+
+        <!--<p class="rText">
+            Splits:
+        </p>
+        <div id="splitSlider" class="sliders">
+        </div>
+        <input type="text" id="splitNumber" value="5" readonly="readonly" />
+        <p/>-->
+
+        <p class="rText">
+            Split:
+        </p>
+        <input type="radio" id="Negative" name="radios" value="all" />
+        <label for="Negative">
+           
+            Negative
+        </label>
+        <input type="radio" id="Constant" name="radios" value="false" checked />
+        <label for="Constant">
+            Constant
+        </label>
+        <input type="radio" id="Positive" name="radios" value="true" />
+        <label for="Positive">
+            Positive
+        </label>
+
+
+        <!--<button id="saveChart" title="Take a photo of the chart">
+            <img src="img/camera-icon.png" alt="Alternate Text" height="22" width="22" />
+        </button>-->
+        <!--      
+                <button id="swimmingButton" />
+                    <img src="swimming-icon.png" alt="Alternate Text" height="22" width="22" />
+                <button id="cyclingButton" />
+                    <img src="cycling-icon.png" alt="Alternate Text" height="22" width="22" />
+                <button id="runningButton" name="radio" />
+                    <img src="running-icon.png" alt="Alternate Text" height="22" width="22" />-->
+        <div id="expectedTime" class="rText">
+            <p/>
+            Expected Time: <input type="text" id="raceInput2" value="10km" readonly="readonly"/><br/>
+            Difference: 0 seconds
+
+        </div>
+    </div>
+    <div style="float: left">
+
+
+    </div>
+    <div style="bottom: 0; font-size: large; position: absolute; color:white">
+        Copyright &copy; <a href="mailto:avnerkantor@gmail.com" style="color:white">Avner Kantor</a> 2013
+    </div>
+</body>
+</html>

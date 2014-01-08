@@ -1,0 +1,278 @@
+﻿body {
+    height: 100%;
+    width: 100%;
+    background-image: url(img/Frederick_Marathon.jpg);
+}
+
+#header {
+    height: 165px;
+    padding: 2%;
+}
+
+#chart {
+    width: 70%;
+    height: 78%;
+    float: left;
+}
+
+#container {
+    width: 65%;
+    position: absolute;
+    height: 45%;
+    padding-left: 0; /*border-left-color: black;     border-bottom-color: black;*/
+    border-width: 1px; /*position: relative;*/ /*top: 80px;*/
+    border-right-width: 1px;
+    background: rgba(0, 0, 0, 0.2);
+    margin-left: 42px;
+    float: left;
+    /*background: -webkit-linear-gradient(bottom, #9ACD32, #9ACD32 50%, #ccc 50%, #ccc);*/
+    display: -moz-box; /* Firefox */
+    display: -webkit-box; /* Safari and Chrome */
+    display: -ms-flexbox; /* Internet Explorer 10 */
+    display: box;
+    border-color: black;
+}
+
+.ui-state-active {
+    width: 20%;
+    float: left;
+    height: 50%;
+    position: relative;
+    box-flex: 1.0;
+}
+
+#chartHeader {
+    margin: 0;
+    padding: 0;
+}
+
+.ui-widget-header {
+    color: Black;
+    border-width: 0px;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 50px;
+    background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(left, #1e5799 0%, #2989d8 50%, #207cca 100%, #7db9e8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(100%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #1e5799 0%,#2989d8 50%,#207cca 100%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #1e5799 0%,#2989d8 50%,#207cca 100%,#7db9e8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #1e5799 0%,#2989d8 50%,#207cca 100%,#7db9e8 100%); /* IE10+ */
+    background: linear-gradient(to right, #1e5799 0%,#2989d8 50%,#207cca 100%,#7db9e8 100%); /* W3C */
+}
+
+#left-ruler {
+    text-align: right;
+    border: 1px solid #ccc;
+    color: #ccc;
+    margin: 0;
+    height: 59%;
+    width: 40px;
+    float: left;
+    z-index: 1;
+}
+
+#bottom-ruler {
+    margin-left: 41px;
+    padding-right: 0;
+    width: 93%;
+}
+
+#constantLine1 {
+    border-style: dotted;
+    border-bottom-color: #ccc;
+    border-bottom-width: 1px;
+    top: 22.5%;
+    width: 99%;
+}
+
+#iPanel {
+    height: 10%;
+    float: left;
+    width: 28%;
+    padding-left: 1%;
+    /*background-color: lightYellow;*/
+    /*border: 1px solid #ccc;*/
+    z-index: 1;
+    border-right-width: 1px;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+#raceSlider, #timeSlider, #factorSlider, #paceSlider, #splitSlider {
+    width: 55%;
+    background-color: transparent;
+    float: left;
+}
+
+#raceInput, #timeTarget, #TargetPaceTime, #splitNumber, #targetFactorTime, #raceInput2 {
+    border: 0px; /*color: #f6931f;*/
+    font-weight: bold;
+    background-color: transparent;
+    width: 40%;
+    padding-left: 1%;
+    color: white;
+}
+
+.rText {
+    width: 35%;
+    color: white;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    border-width: 0px;
+    background-image: none;
+    /*background: #1e5799; /* Old browsers */
+    background: -moz-linear-gradient(left, #1e5799 0%, #2989d8 50%, #207cca 100%, #7db9e8 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(100%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left, #1e5799 0%,#2989d8 50%,#207cca 100%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left, #1e5799 0%,#2989d8 50%,#207cca 100%,#7db9e8 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left, #1e5799 0%,#2989d8 50%,#207cca 100%,#7db9e8 100%); /* IE10+ */
+    background: linear-gradient(to right, #1e5799 0%,#2989d8 50%,#207cca 100%,#7db9e8 100%); /* W3C */
+    color: Black;
+    font-weight: normal;
+    z-index: 0;
+}
+
+/* Ruler */
+.ruler, .ruler li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: inline-block;
+}
+
+.ruler {
+    background: lightYellow;
+    box-shadow: 0 -1px 1em hsl(60, 60%, 84%) inset;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    color: #ccc;
+    margin: 0;
+    height: 2em; /*padding-right: 28px;*/
+    white-space: nowrap;
+}
+
+    .ruler li {
+        /*padding-left: 28px;*/
+        width: 2em;
+        margin: .64em -1em -.64em;
+        text-align: center;
+        position: relative;
+    }
+
+        .ruler li:before {
+            content: '';
+            position: absolute;
+            border-left: 1px solid #ccc;
+            height: .64em;
+            top: -.64em;
+            right: 1em;
+        }
+
+.ui-content {
+    text-align: center;
+    top: 0;
+}
+
+.ui-tooltip, .arrow:after {
+    background: black;
+    border: 2px solid white;
+}
+
+.ui-tooltip {
+    padding: 10px 20px;
+    color: white;
+    border-radius: 20px;
+    font: bold 14px "Helvetica Neue", Sans-Serif;
+    text-transform: uppercase;
+    box-shadow: 0 0 7px black;
+}
+
+.arrow {
+    width: 70px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    margin-left: -35px;
+    bottom: -16px;
+}
+
+    .arrow.top {
+        top: -16px;
+        bottom: auto;
+    }
+
+    .arrow.left {
+        left: 20%;
+    }
+
+    .arrow:after {
+        content: "";
+        position: absolute;
+        left: 20px;
+        top: -20px;
+        width: 25px;
+        height: 25px;
+        box-shadow: 6px 5px 9px -9px black;
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        -o-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+    .arrow.top:after {
+        bottom: -20px;
+        top: auto;
+    }
+
+#expectedTime {
+    width: 200px;
+    height: 100px;
+}
+
+
+input[type=radio], input[type=checkbox] {
+    display: none;
+}
+
+    input[type=radio] + label, input[type=checkbox] + label {
+        display: inline-block;
+        margin: -2px;
+        padding: 4px 12px;
+        margin-bottom: 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: #333;
+        text-align: center;
+        -webkit-text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+        text-shadow: 0 1px 1px rgba(255,255,255,0.75);
+        vertical-align: middle;
+        cursor: pointer;
+        background-color: #f5f5f5;
+        background-image: -moz-linear-gradient(top,#fff,#e6e6e6);
+        background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#e6e6e6));
+        background-image: -webkit-linear-gradient(top,#fff,#e6e6e6);
+        background-image: -o-linear-gradient(top,#fff,#e6e6e6);
+        background-image: linear-gradient(to bottom,#fff,#e6e6e6);
+        background-repeat: repeat-x;
+        border: 1px solid #ccc;
+        border-color: #e6e6e6 #e6e6e6 #bfbfbf;
+        border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
+        border-bottom-color: #b3b3b3;
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#ffe6e6e6',GradientType=0);
+        filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+        -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+        -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.2),0 1px 2px rgba(0,0,0,0.05);
+    }
+
+    input[type=radio]:checked + label, input[type=checkbox]:checked + label {
+        background-image: none;
+        outline: 0;
+        -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+        -moz-box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+        box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
+        background-color: #e0e0e0;
+    }
