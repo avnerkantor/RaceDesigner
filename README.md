@@ -1,8 +1,8 @@
 # Race Designer  
-
 **My first data journalism app (2013).**  
-Race Designer is an interactive tool for planning and visualizing your race strategy.  
+<img src="img/screenshot.png" alt="Race Designer Screenshot" width="600">
 
+Race Designer is an interactive tool for planning and visualizing your race strategy.  
 ## Features  
 - 📏 **Per-kilometer breakdown** – shows elapsed time for every kilometer so you can monitor progress throughout the race.  
 - ⏱ **Split pacing mode** – lets you experiment with different pacing strategies to optimize performance.  
