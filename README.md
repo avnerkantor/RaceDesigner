@@ -1,7 +1,13 @@
-**Race Designer** is interactive graph convenient tool for design race plan.   
-The graph has two unique features:  
-1) It provides the elapsed time for every kilometer so that you can monitor progress during your race.  
-2) It incorporates a "split" pacing feature.
+# Race Designer  
 
-#####Programming issues
-Although there are several JavaScript chart library I could not find one that enables resizing chart's bar. The solution I found was to use JavaScript UI library like [jQuery UI] (http://jqueryui.com/) or CSS3. This is not a perfect solustion bcause you need to build the chart by yourself.     
+**My first data journalism app (2013).**  
+Race Designer is an interactive tool for planning and visualizing your race strategy.  
+
+## Features  
+- 📏 **Per-kilometer breakdown** – shows elapsed time for every kilometer so you can monitor progress throughout the race.  
+- ⏱ **Split pacing mode** – lets you experiment with different pacing strategies to optimize performance.  
+
+## Technical Notes  
+While many JavaScript chart libraries exist, I couldn’t find one that allowed **resizing a chart’s bars** out of the box.  
+To solve this, I used a JavaScript UI library ([jQuery UI](http://jqueryui.com/)) and CSS3.  
+This approach isn’t perfect—you need to build the chart manually—but it provides the flexibility to implement interactive resizing.  
